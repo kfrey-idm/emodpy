@@ -129,7 +129,11 @@ class CampaignEventByYear(BaseEvent):
         Returns:
             bool: True if the year is supported, otherwise False.
         """
-        event = s2c.get_class_with_defaults(self.event_class_name, schema_json=campaign.get_schema())
+        try:
+            event = s2c.get_class_with_defaults(self.event_class_name, schema_json=campaign.get_schema())
+        except ValueError:
+            return False
+
         return hasattr(event, 'Start_Year')
 
 
