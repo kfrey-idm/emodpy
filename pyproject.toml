@@ -57,7 +57,8 @@ test = [
 
 [project.urls]
 Repository = "https://github.com/EMOD-Hub/emodpy"
-Issues = "https://github.com/EMOD-Hub/emodpy/issues"
+Documentation = "https://emod.idmod.org/emodpy/"
+Issues = "https://github.com/EMOD-Hub/issues-and-discussions/issues"
 
 [project.entry-points.idmtools_task]
 idmtools_task_emod = "emodpy.emod_task:EMODTaskSpecification"
